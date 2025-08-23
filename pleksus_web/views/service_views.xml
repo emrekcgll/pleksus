@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <!-- Service Category Tree View -->
+        <record id="view_service_category_tree" model="ir.ui.view">
+            <field name="name">pleksus.service.category.tree</field>
+            <field name="model">pleksus.service.category</field>
+            <field name="arch" type="xml">
+                <tree string="Hizmet Kategorileri">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="service_ids" widget="many2many_tags"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Service Category Form View -->
+        <record id="view_service_category_form" model="ir.ui.view">
+            <field name="name">pleksus.service.category.form</field>
+            <field name="model">pleksus.service.category</field>
+            <field name="arch" type="xml">
+                <form string="Hizmet Kategorisi">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="sequence"/>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Hizmetler">
+                                <field name="service_ids">
+                                    <tree>
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="name"/>
+                                        <field name="is_popular"/>
+                                        <field name="active"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Service Category Action -->
+        <record id="action_service_category" model="ir.actions.act_window">
+            <field name="name">Hizmet Kategorileri</field>
+            <field name="res_model">pleksus.service.category</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    İlk hizmet kategorisini oluşturun!
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu Items -->
+        <menuitem id="menu_pleksus_services"
+                  name="Pleksus Hizmetleri"
+                  parent="website.menu_website_global_configuration"
+                  sequence="100"/>
+
+        <menuitem id="menu_service_category"
+                  name="Hizmet Kategorileri"
+                  parent="menu_pleksus_services"
+                  action="action_service_category"
+                  sequence="10"/>
+
+    </data>
+</odoo>

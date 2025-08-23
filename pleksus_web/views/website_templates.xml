@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Ana Sayfa Template -->
+        <template id="homepage" name="Pleksus Ana Sayfa">
+            <t t-call="website.layout">
+
+                <section class="hero-section py-5">
+                    <div class="container px-5">
+                        <div class="row gx-5">
+                            <div class="col-lg-6">
+                                <div class="my-5">
+                                    <h1 class="display-5 fw-bolder mb-2">Uzman ekipten hızlı
+                                        randevu, yerinde profesyonel hizmet</h1>
+                                    <p class="lead mb-4">5000'in üzerinde deneyimli sağlık
+                                        profesyoneli ile hizmet veriyoruz.</p>
+                                    <div class="d-grid gap-3 d-sm-flex">
+                                        <a class="btn btn-primary px-4 py-2" href="#!">Evde Doktor</a>
+                                        <a class="btn btn-primary px-4 py-2" href="#!">Evde Hemşire</a>
+                                        <a class="btn btn-primary px-4 py-2" href="#!">Evde Veteriner</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-5">
+                    <div class="container">
+                        <div class="row">
+                            <t t-foreach="categories" t-as="category">
+                                <div class="col-12 mb-3">
+                                    <h4 class="fw-bold" t-esc="category.name"/>
+                                    <div class="d-flex gap-4 overflow-auto pb-3">
+                                        <t t-foreach="category.service_ids.filtered(lambda s: s.active)" t-as="service">
+                                            <div class="card border-0 shadow-sm service-card" t-att-data-service-id="service.id">
+                                                <div class="position-relative">
+                                                    <img t-att-src="service.image_url or '/pleksus_web/static/src/images/1.png'"
+                                                         class="img-fluid card-img-top"
+                                                         t-att-alt="service.name" />
+                                                    
+                                                    <t t-if="service.is_popular">
+                                                        <div class="position-absolute top-0 start-0 m-2">
+                                                            <span class="badge bg-success rounded-pill px-3 py-2">POPÜLER</span>
+                                                        </div>
+                                                    </t>
+                                                    
+                                                    <div class="position-absolute bottom-0 start-0 end-0 p-3"
+                                                         style="background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+                                                        <p class="text-white text-center mb-0 fw-semibold" t-esc="service.name"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="hero-section-2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="fw-bold text-center m-5">Neden Pleksus?</h2>
+                                <div class="col-8">
+                                    <div class="row">
+                                        <div class="col-6 mb-5">
+                                            <div class="d-flex align-items-start">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div class="border bg-white shadow-sm rounded-2 p-2">
+                                                        <i class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6>Profesyonel Hizmet</h6>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-5">
+                                            <div class="d-flex align-items-start">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div class="border bg-white shadow-sm rounded-2 p-2">
+                                                        <i class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6>Profesyonel Hizmet</h6>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-5">
+                                            <div class="d-flex align-items-start">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div class="border bg-white shadow-sm rounded-2 p-2">
+                                                        <i class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6>Profesyonel Hizmet</h6>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-5">
+                                            <div class="d-flex align-items-start">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div class="border bg-white shadow-sm rounded-2 p-2">
+                                                        <i class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6>Profesyonel Hizmet</h6>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/" class="btn btn-primary rounded-pill px-4 py-2">Sağlık Hizmeti İçin Tıkla</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="fw-bold text-center mb-3">Profesyonellerimize Gelen Yorumlar</h2>
+                                <p class="text-center mb-5">Çok beğeni alan profesyonellerimizin profillerine giderek yapılan yorumları okuyup güvenle hizmet alabilirsin!</p>
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-10">
+                                        <div class="row g-4">
+                                            <div class="col-lg-4">
+                                                <div class="card border-0 shadow-sm h-100">
+                                                    <div class="card-body p-4">
+                                                        <div class="mb-3 text-center">
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                        </div>
+                                                        <p class="mb-4 text-center">Sağlık sektöründen aldığım hizmetten son derece memnun kaldım ve bu deneyimi paylaşmak istedim. Pleksus ekibi, beni her adımda rahat hissettirdi.</p>
+                                                        <div class="mb-4 text-center">
+                                                            <strong>Yiğithan A.</strong>
+                                                            <span class="text-muted">(İstanbul)</span>
+                                                        </div>
+                                                        <div class="rounded-pill shadow-sm p-3">
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="/pleksus_web/static/src/images/50x50.png" class="rounded-circle me-3" />
+                                                                <div class="flex-grow-1">
+                                                                    <div class="fw-bold">Dr. Ayşe Meran</div>
+                                                                    <div class="text-muted small">Noroloji Uzmanı</div>
+                                                                    <div class="mt-1">
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <span class="text-muted ms-1">(4.81)</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ms-2">
+                                                                    <i class="fa fa-chevron-right text-muted"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="card border-0 shadow-sm h-100">
+                                                    <div class="card-body p-4">
+                                                        <div class="mb-3 text-center">
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                        </div>
+                                                        <p class="mb-4 text-center">Sağlık sektöründen aldığım hizmetten son derece memnun kaldım ve bu deneyimi paylaşmak istedim. Pleksus ekibi, beni her adımda rahat hissettirdi.</p>
+                                                        <div class="mb-4 text-center">
+                                                            <strong>Yiğithan A.</strong>
+                                                            <span class="text-muted">(İstanbul)</span>
+                                                        </div>
+                                                        <div class="rounded-pill shadow-sm p-3">
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="/pleksus_web/static/src/images/50x50.png" class="rounded-circle me-3" />
+                                                                <div class="flex-grow-1">
+                                                                    <div class="fw-bold">Dr. Ayşe Meran</div>
+                                                                    <div class="text-muted small">Noroloji Uzmanı</div>
+                                                                    <div class="mt-1">
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <span class="text-muted ms-1">(4.81)</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ms-2">
+                                                                    <i class="fa fa-chevron-right text-muted"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="card border-0 shadow-sm h-100">
+                                                    <div class="card-body p-4">
+                                                        <div class="mb-3 text-center">
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                            <i class="fa fa-star fa-2x text-warning"></i>
+                                                        </div>
+                                                        <p class="mb-4 text-center">Sağlık sektöründen aldığım hizmetten son derece memnun kaldım ve bu deneyimi paylaşmak istedim. Pleksus ekibi, beni her adımda rahat hissettirdi.</p>
+                                                        <div class="mb-4 text-center">
+                                                            <strong>Yiğithan A.</strong>
+                                                            <span class="text-muted">(İstanbul)</span>
+                                                        </div>
+                                                        <div class="rounded-pill shadow-sm p-3">
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="/pleksus_web/static/src/images/50x50.png" class="rounded-circle me-3" />
+                                                                <div class="flex-grow-1">
+                                                                    <div class="fw-bold">Dr. Ayşe Meran</div>
+                                                                    <div class="text-muted small">Noroloji Uzmanı</div>
+                                                                    <div class="mt-1">
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i class="fa fa-star text-warning fa-sm"></i>
+                                                                        <span class="text-muted ms-1">(4.81)</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ms-2">
+                                                                    <i class="fa fa-chevron-right text-muted"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-5">
+                                    <a href="#!" class="btn btn-primary px-5 py-3">
+                                        Hizmet Al / Doktor Çağır
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </t>
+        </template>
+
+    </data>
+</odoo>

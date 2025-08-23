@@ -1,0 +1,25 @@
+/* Hero Section */
+.hero-section {
+    background-image: url('/pleksus_web/static/src/images/hero-bg-1.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 550px;
+}
+
+.hero-section-2 {
+    background-image: url('/pleksus_web/static/src/images/hero-bg-2.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 550px;
+}
+
+/* Custom Button Colors */
+.btn-primary {
+    background-color: #D36500;
+    border-color: #D36500;
+}
+
+.btn-primary:hover {
+    background-color: #B85A00;
+    border-color: #B85A00;
+}
