@@ -13,6 +13,10 @@
     min-height: 550px;
 }
 
+.bg-light {
+    background-color: #FBF6F6;
+}
+
 /* Custom Button Colors */
 .btn-primary {
     background-color: #D36500;
