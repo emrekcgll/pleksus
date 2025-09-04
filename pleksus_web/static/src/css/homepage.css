@@ -13,6 +13,24 @@
     min-height: 550px;
 }
 
+.hero-section-3 {
+    background-image: url('/pleksus_web/static/src/images/hero-bg-3.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 550px;
+}
+
+/* Icon Circle Styles */
+.icon-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #8d8d8d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .bg-light {
     background-color: #FBF6F6;
 }
@@ -26,4 +44,38 @@
 .btn-primary:hover {
     background-color: #B85A00;
     border-color: #B85A00;
+}
+
+.download-btn {
+    background-color: #000000;
+    border-color: #000000;
+    color: #ffffff;
+    border-radius: 8px;
+    min-width: 200px;
+    height: 60px;
+}
+
+.download-btn:hover {
+    background-color: #292929;
+    border-color: #292929;
+    color: #ffffff;
+}
+
+.download-icon {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.download-text {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.download-text small {
+    font-size: 13px;
+    opacity: 0.8;
 }

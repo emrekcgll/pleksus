@@ -333,6 +333,67 @@
                     </div>
                 </section>
 
+                <section class="py-5 hero-section-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6 text-center">
+                                <h2 class="fw-bold mb-5 mt-5">Pleksus Mobili İndir</h2>
+                                <div class="row justify-content-center mt-5">
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="d-flex flex-column align-items-center">
+                                            <div class="icon-circle mb-3">
+                                                <i class="fa fa-user-md fa-3x text-white"></i>
+                                            </div>
+                                            <p>Kolay randevu</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="d-flex flex-column align-items-center">
+                                            <div class="icon-circle mb-3">
+                                                <i class="fa fa-clock-o fa-3x text-white"></i>
+                                            </div>
+                                            <p>Hizmet verenlerin puanlamarını gör</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="d-flex flex-column align-items-center">
+                                            <div class="icon-circle mb-3">
+                                                <i class="fa fa-heart fa-3x text-white"></i>
+                                            </div>
+                                            <p>Sağlık profesyonellerine mesaj at, ara ve haritada takip et</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn download-btn">
+                                    <div class="d-flex align-items-center">
+                                        <div class="download-icon me-3">
+                                            <i class="fa fa-google"></i>
+                                        </div>
+                                        <div class="download-text">
+                                            <div class="fw-bold">Google Play</div>
+                                            <small class="fw-light">'DEN İNDİR</small>
+                                        </div>
+                                    </div>
+                                </button>
+                                <button class="btn download-btn">
+                                    <div class="d-flex align-items-center">
+                                        <div class="download-icon me-3">
+                                            <i class="fa fa-apple"></i>
+                                        </div>
+                                        <div class="download-text">
+                                            <div class="fw-bold">App Store</div>
+                                            <small class="fw-light">'DAN İNDİR</small>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="col-3"></div>
+                        </div>
+                    </div>
+                </section>
+                
+                
             </t>
         </template>
 
