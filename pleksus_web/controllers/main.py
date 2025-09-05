@@ -23,6 +23,13 @@ class PleksusWebController(http.Controller):
         return request.render('pleksus_web.pleksus_homepage', {
             'categories': categories
         })
+
+
+    @http.route('/application', type='http', auth='public', website=True)
+    def application(self, **kwargs):
+        """Başvuru sayfası"""
+        return request.render('pleksus_web.pleksus_application')
+    
     
     @http.route('/contact', type='http', auth='public', website=True, methods=['POST'])
     def contact_form(self, **kwargs):

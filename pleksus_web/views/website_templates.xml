@@ -71,11 +71,11 @@
                     </div>
                 </section>
 
-                <section class="hero-section-2">
+                <section class="hero-section-2 py-5">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <h2 class="fw-bold text-center m-5">Neden Pleksus?</h2>
+                                <h2 class="fw-bold text-center mb-5">Neden Pleksus?</h2>
                                 <div class="col-8">
                                     <div class="row">
                                         <div class="col-6 mb-5">
@@ -155,7 +155,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <h2 class="fw-bold text-center mb-3">Profesyonellerimize Gelen
+                                <h2 class="fw-bold text-center">Profesyonellerimize Gelen
                                     Yorumlar</h2>
                                 <p class="text-center mb-5">Çok beğeni alan profesyonellerimizin
                                     profillerine giderek yapılan yorumları okuyup güvenle hizmet
@@ -342,7 +342,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <h2 class="fw-bold text-center mb-3">Sıkça Sorulan Sorular</h2>
+                                <h2 class="fw-bold text-center mb-5">Sıkça Sorulan Sorular</h2>
                                 <div class="accordion bg-white">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="headingOne">
@@ -435,7 +435,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <h2 class="fw-bold text-center mb-4">Tüm Hizmetlerimiz</h2>
+                                <h2 class="fw-bold text-center mb-5">Tüm Hizmetlerimiz</h2>
                                 <div
                                     class="d-flex justify-content-center align-items-center flex-wrap gap-3">
                                     <a href="" class="btn rounded-pill shadow-sm px-4 py-2">Basit
@@ -454,12 +454,12 @@
                     </div>
                 </section>
 
-                <section class="py-5 hero-section-3">
+                <section class="hero-section-3 py-5">
                     <div class="container">
                         <div class="row">
                             <div class="col-3"></div>
                             <div class="col-6 text-center">
-                                <h2 class="fw-bold mb-5 mt-5">Pleksus Mobili İndir</h2>
+                                <h2 class="fw-bold mb-5">Pleksus Mobili İndir</h2>
                                 <div class="row justify-content-center mt-5">
                                     <div class="col-lg-4 col-md-6 mb-4">
                                         <div class="d-flex flex-column align-items-center">
@@ -515,6 +515,372 @@
                     </div>
                 </section>
 
+            </t>
+        </template>
+
+        <!-- Başvuru Template -->
+        <template id="pleksus_application" name="Pleksus Başvuru">
+            <t t-call="website.layout">
+
+                <section class="py-5 bg-light">
+                    <div class="container">
+                        <div class="row g-5 justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card shadow-sm border-0 h-100">
+                                    <div class="card-body p-5 d-flex flex-column">
+                                        <h4 class="fw-bold mb-4">Pleksus'a Katıl</h4>
+                                        <form method="post" action="/application"
+                                            class="flex-grow-1 d-flex flex-column">
+                                            <div class="row flex-grow-1">
+                                                <div class="col-12 mb-3">
+                                                    <input type="text" class="form-control"
+                                                        id="fullname" name="fullname"
+                                                        placeholder="Ad Soyad" />
+                                                </div>
+                                                <div class="col-12 mb-3">
+                                                    <input type="tel" class="form-control"
+                                                        id="phone" name="phone"
+                                                        placeholder="05012345678" />
+                                                </div>
+                                                <div class="col-12 mb-3">
+                                                    <input type="text" class="form-control"
+                                                        id="specialty" name="specialty"
+                                                        placeholder="Uzmanlık Alanı" />
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <select class="form-select" id="city"
+                                                        name="city">
+                                                        <option value="">İl Seçin</option>
+                                                        <option value="istanbul">İstanbul</option>
+                                                        <option value="ankara">Ankara</option>
+                                                        <option value="izmir">İzmir</option>
+                                                        <option value="bursa">Bursa</option>
+                                                        <option value="antalya">Antalya</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <select class="form-select" id="district"
+                                                        name="district">
+                                                        <option value="">İlçe Seçin</option>
+                                                        <option value="kadikoy">Kadıköy</option>
+                                                        <option value="besiktas">Beşiktaş</option>
+                                                        <option value="sisli">Şişli</option>
+                                                        <option value="beyoglu">Beyoğlu</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12 mb-4">
+                                                    <div class="d-flex gap-4">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input"
+                                                                type="radio" name="gender"
+                                                                id="female" value="female" />
+                                                            <label
+                                                                class="form-check-label fw-medium"
+                                                                for="female">
+                                                                Kadın
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input"
+                                                                type="radio" name="gender" id="male"
+                                                                value="male" />
+                                                            <label
+                                                                class="form-check-label fw-medium"
+                                                                for="male">
+                                                                Erkek
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-4">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input"
+                                                            type="checkbox" id="consent"
+                                                            name="consent" />
+                                                        <label class="form-check-label text-muted"
+                                                            for="consent">
+                                                            Kişisel verilerimin korunmasına dair
+                                                            aydınlatma metnini okudum, onaylıyorum.
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mt-auto">
+                                                    <button type="submit"
+                                                        class="btn btn-primary w-100 fw-bold">
+                                                        Ekibe Katıl
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="h-100 d-flex align-items-center">
+                                    <img src="/pleksus_web/static/src/images/application.png"
+                                        alt="Başvuru" class="img-fluid" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="hero-section-2 py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="fw-bold text-center mb-5">Neden Pleksus?</h2>
+                                <div class="col-8">
+                                    <div class="row">
+                                        <div class="col-6 mb-5">
+                                            <div class="d-flex align-items-start">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div
+                                                        class="border bg-white shadow-sm rounded-2 p-2">
+                                                        <i
+                                                            class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6>Profesyonel Hizmet</h6>
+                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Quisquam, quos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-5">
+                                            <div class="d-flex align-items-start">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div
+                                                        class="border bg-white shadow-sm rounded-2 p-2">
+                                                        <i
+                                                            class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6>Profesyonel Hizmet</h6>
+                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Quisquam, quos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-5">
+                                            <div class="d-flex align-items-start">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div
+                                                        class="border bg-white shadow-sm rounded-2 p-2">
+                                                        <i
+                                                            class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6>Profesyonel Hizmet</h6>
+                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Quisquam, quos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-5">
+                                            <div class="d-flex align-items-start">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div
+                                                        class="border bg-white shadow-sm rounded-2 p-2">
+                                                        <i
+                                                            class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6>Profesyonel Hizmet</h6>
+                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Quisquam, quos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-5">
+                    <div class="container">
+                        <div class="row">
+                            <h2 class="fw-bold text-center mb-5">3 Adımda Pleksus ile Para Kazanma</h2>
+                            <div class="col-md-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="position-relative me-3">
+                                        <div class="text-primary bg-white rounded-3 p-3 shadow-sm border d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                            <i class="fa fa-money fs-1"></i>
+                                        </div>
+                                        <div class="position-absolute top-0 start-0 bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 24px; height: 24px; font-size: 14px; transform: translate(-25%, -25%);">
+                                            1
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5 class="fw-bold mb-2">Yüksek Kazanç</h5>
+                                        <p class="text-muted mb-0">
+                                            Sınırlandırma olmadan istediğin kadar çalışabilirsin.
+                                            Yüksek kazanç elde etmek için düzenli sıklıkta işe
+                                            gitmen yeterli!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="position-relative me-3">
+                                        <div class="text-primary bg-white rounded-3 p-3 shadow-sm border d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                            <i class="fa fa-clock-o fs-1"></i>
+                                        </div>
+                                        <div class="position-absolute top-0 start-0 bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 24px; height: 24px; font-size: 14px; transform: translate(-25%, -25%);">
+                                            2
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5 class="fw-bold mb-2">Esnek Çalışma Saatleri</h5>
+                                        <p class="text-muted mb-0">
+                                            İstediğin her gün ve saat çalışabildiğin gibi çalışmama
+                                            hakkına da sahipsin. Sahiplendiğin işler için bile acil
+                                            durumlarda gitmeme hakkını kullanabilirsin.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="position-relative me-3">
+                                        <div class="text-primary bg-white rounded-3 p-3 shadow-sm border d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                                            <i class="fa fa-credit-card-alt fs-1"></i>
+                                        </div>
+                                        <div class="position-absolute top-0 start-0 bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 24px; height: 24px; font-size: 14px; transform: translate(-25%, -25%);">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5 class="fw-bold mb-2">Düzenli Ödeme</h5>
+                                        <p class="text-muted mb-0">
+                                            Aynı hesabına ödeme aktarma imkanı
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-5 bg-light">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="fw-bold text-center mb-5">Sıkça Sorulan Sorular</h2>
+                                <div class="accordion bg-white">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                                Accordion Item #1
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne"
+                                            class="accordion-collapse collapse show"
+                                            aria-labelledby="headingOne"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <strong>This is the first item's accordion body.</strong>
+                                                It is shown by default, until the collapse plugin
+                                                adds the appropriate classes that we use to style
+                                                each element. These classes control the overall
+                                                appearance, as well as the showing and hiding via
+                                                CSS transitions. You can modify any of this with
+                                                custom CSS or overriding our default variables. It's
+                                                also worth noting that just about any HTML can go
+                                                within the <code>.accordion-body</code>, though the
+                                                transition does limit overflow. </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseTwo" aria-expanded="false"
+                                                aria-controls="collapseTwo">
+                                                Accordion Item #2
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            aria-labelledby="headingTwo"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <strong>This is the second item's accordion body.</strong>
+                                                It is hidden by default, until the collapse plugin
+                                                adds the appropriate classes that we use to style
+                                                each element. These classes control the overall
+                                                appearance, as well as the showing and hiding via
+                                                CSS transitions. You can modify any of this with
+                                                custom CSS or overriding our default variables. It's
+                                                also worth noting that just about any HTML can go
+                                                within the <code>.accordion-body</code>, though the
+                                                transition does limit overflow. </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                Accordion Item #3
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="headingThree"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <strong>This is the third item's accordion body.</strong>
+                                                It is hidden by default, until the collapse plugin
+                                                adds the appropriate classes that we use to style
+                                                each element. These classes control the overall
+                                                appearance, as well as the showing and hiding via
+                                                CSS transitions. You can modify any of this with
+                                                custom CSS or overriding our default variables. It's
+                                                also worth noting that just about any HTML can go
+                                                within the <code>.accordion-body</code>, though the
+                                                transition does limit overflow. </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-5">
+                                    <a href="#!" class="btn btn-primary px-5 py-3">
+                                        Sıkça Sorulan Sorular
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="fw-bold text-center mb-5">Neden Pleksus Profesyoneli Olmalısın?</h2>
+                                <ul class="mx-5">
+                                    <li>Ankara, İstanbul veya İzmir'de sağlık hizmeti ya da  işi arıyorsan tek doğru adresin Pleksus</li>
+                                    <li>Pleksus sağlık hizmeti şirketleri arasında kazancını gününde ve eksiksiz yatıran tek şirket!</li>
+                                    <li>Pleksus şu anda sistemine kayıtlı 2600'ün üzerinde sağlık profesyonellerine ulaşmanıza olanak sağlar.</li>
+                                    <li>150'nin üzerinde Sağlık Profesyonellerine sahip.</li>
+                                    <li>İstediğin tarih ve saatteki işleri sahiplenebilir, çalıştığın kadar kazanç sağlayabilirsin.</li>
+                                    <li>Performansına göre her ay düzenlenen ödül töreninde önemli markalardan hediye, altın ve çok daha fazlasını
+                                        kazanma şansı Pleksus’da! Daha ne bekliyorsun? Sağlık hizmeti ya da işi arıyorsan hemen başvur,
+                                        en kısa sürede seni arayalım!</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
             </t>
         </template>
@@ -604,10 +970,11 @@
                                             <div class="card-body d-flex flex-column">
                                                 <div class="d-flex align-items-center mb-3">
                                                     <div class="flex-shrink-0 me-3">
-                                                        <img src="/pleksus_web/static/src/images/50x50.png" 
-                                                             alt="Dr. Ayça Meral" 
-                                                             class="rounded-circle" 
-                                                             style="width: 60px; height: 60px; object-fit: cover;" />
+                                                        <img
+                                                            src="/pleksus_web/static/src/images/50x50.png"
+                                                            alt="Dr. Ayça Meral"
+                                                            class="rounded-circle"
+                                                            style="width: 60px; height: 60px; object-fit: cover;" />
                                                     </div>
                                                     <div class="flex-grow-1">
                                                         <h5 class="card-title mb-1">Dr. Ayça Meral</h5>
@@ -627,7 +994,8 @@
                                                 </div>
                                                 <div class="mt-auto">
                                                     <p class="card-text text-muted fst-italic">
-                                                        "Pleksus'le gittiğimiz her evde bir şeyler öğreniyoruz, bu bize çok şey katıyor."
+                                                        "Pleksus'le gittiğimiz her evde bir şeyler
+                                                        öğreniyoruz, bu bize çok şey katıyor."
                                                     </p>
                                                 </div>
                                             </div>
@@ -639,10 +1007,11 @@
                                             <div class="card-body d-flex flex-column">
                                                 <div class="d-flex align-items-center mb-3">
                                                     <div class="flex-shrink-0 me-3">
-                                                        <img src="/pleksus_web/static/src/images/50x50.png" 
-                                                             alt="Dr. Mehmet Kaya" 
-                                                             class="rounded-circle" 
-                                                             style="width: 60px; height: 60px; object-fit: cover;" />
+                                                        <img
+                                                            src="/pleksus_web/static/src/images/50x50.png"
+                                                            alt="Dr. Mehmet Kaya"
+                                                            class="rounded-circle"
+                                                            style="width: 60px; height: 60px; object-fit: cover;" />
                                                     </div>
                                                     <div class="flex-grow-1">
                                                         <h5 class="card-title mb-1">Dr. Mehmet Kaya</h5>
@@ -662,7 +1031,8 @@
                                                 </div>
                                                 <div class="mt-auto">
                                                     <p class="card-text text-muted fst-italic">
-                                                        "Hasta memnuniyeti odaklı çalışma felsefesi ile gerçekten fark yaratıyoruz."
+                                                        "Hasta memnuniyeti odaklı çalışma felsefesi
+                                                        ile gerçekten fark yaratıyoruz."
                                                     </p>
                                                 </div>
                                             </div>
@@ -674,13 +1044,15 @@
                                             <div class="card-body d-flex flex-column">
                                                 <div class="d-flex align-items-center mb-3">
                                                     <div class="flex-shrink-0 me-3">
-                                                        <img src="/pleksus_web/static/src/images/50x50.png" 
-                                                             alt="Hemşire Elif Demir" 
-                                                             class="rounded-circle" 
-                                                             style="width: 60px; height: 60px; object-fit: cover;" />
+                                                        <img
+                                                            src="/pleksus_web/static/src/images/50x50.png"
+                                                            alt="Hemşire Elif Demir"
+                                                            class="rounded-circle"
+                                                            style="width: 60px; height: 60px; object-fit: cover;" />
                                                     </div>
                                                     <div class="flex-grow-1">
-                                                        <h5 class="card-title mb-1">Hemşire Elif Demir</h5>
+                                                        <h5 class="card-title mb-1">Hemşire Elif
+                                                            Demir</h5>
                                                         <div class="mb-2">
                                                             <span class="text-warning">
                                                                 <i class="fa fa-star"></i>
@@ -697,7 +1069,8 @@
                                                 </div>
                                                 <div class="mt-auto">
                                                     <p class="card-text text-muted fst-italic">
-                                                        "Evde bakım hizmeti verirken ailelerin güvenini kazanmak en büyük motivasyonum."
+                                                        "Evde bakım hizmeti verirken ailelerin
+                                                        güvenini kazanmak en büyük motivasyonum."
                                                     </p>
                                                 </div>
                                             </div>
@@ -709,10 +1082,11 @@
                                             <div class="card-body d-flex flex-column">
                                                 <div class="d-flex align-items-center mb-3">
                                                     <div class="flex-shrink-0 me-3">
-                                                        <img src="/pleksus_web/static/src/images/50x50.png" 
-                                                             alt="Dr. Zeynep Özkan" 
-                                                             class="rounded-circle" 
-                                                             style="width: 60px; height: 60px; object-fit: cover;" />
+                                                        <img
+                                                            src="/pleksus_web/static/src/images/50x50.png"
+                                                            alt="Dr. Zeynep Özkan"
+                                                            class="rounded-circle"
+                                                            style="width: 60px; height: 60px; object-fit: cover;" />
                                                     </div>
                                                     <div class="flex-grow-1">
                                                         <h5 class="card-title mb-1">Dr. Zeynep Özkan</h5>
@@ -732,7 +1106,8 @@
                                                 </div>
                                                 <div class="mt-auto">
                                                     <p class="card-text text-muted fst-italic">
-                                                        "Teknoloji destekli sağlık hizmetleri ile hasta takibini daha etkili yapabiliyoruz."
+                                                        "Teknoloji destekli sağlık hizmetleri ile
+                                                        hasta takibini daha etkili yapabiliyoruz."
                                                     </p>
                                                 </div>
                                             </div>
@@ -743,8 +1118,8 @@
                         </div>
                     </div>
                 </section>
-
             </xpath>
         </template>
+
     </data>
 </odoo>
