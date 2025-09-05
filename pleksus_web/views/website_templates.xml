@@ -3,7 +3,7 @@
     <data>
 
         <!-- Ana Sayfa Template -->
-        <template id="homepage" name="Pleksus Ana Sayfa">
+        <template id="pleksus_homepage" name="Pleksus Ana Sayfa">
             <t t-call="website.layout">
 
                 <section class="hero-section py-5">
@@ -18,7 +18,8 @@
                                     <div class="d-grid gap-3 d-sm-flex">
                                         <a class="btn btn-primary px-4 py-2" href="#!">Evde Doktor</a>
                                         <a class="btn btn-primary px-4 py-2" href="#!">Evde Hemşire</a>
-                                        <a class="btn btn-primary px-4 py-2" href="#!">Evde Veteriner</a>
+                                        <a class="btn btn-primary px-4 py-2" href="#!">Evde
+                                            Veteriner</a>
                                     </div>
                                 </div>
                             </div>
@@ -31,24 +32,34 @@
                         <div class="row">
                             <t t-foreach="categories" t-as="category">
                                 <div class="col-12 mb-3">
-                                    <h4 class="fw-bold" t-esc="category.name"/>
+                                    <h4 class="fw-bold" t-esc="category.name" />
                                     <div class="d-flex gap-4 overflow-auto pb-3">
-                                        <t t-foreach="category.service_ids.filtered(lambda s: s.active)" t-as="service">
-                                            <div class="card border-0 shadow-sm service-card" t-att-data-service-id="service.id">
+                                        <t
+                                            t-foreach="category.service_ids.filtered(lambda s: s.active)"
+                                            t-as="service">
+                                            <div class="card border-0 shadow-sm service-card"
+                                                t-att-data-service-id="service.id">
                                                 <div class="position-relative">
-                                                    <img t-att-src="service.image_url or '/pleksus_web/static/src/images/1.png'"
-                                                         class="img-fluid card-img-top"
-                                                         t-att-alt="service.name" />
-                                                    
+                                                    <img
+                                                        t-att-src="service.image_url or '/pleksus_web/static/src/images/1.png'"
+                                                        class="img-fluid card-img-top"
+                                                        t-att-alt="service.name" />
+
                                                     <t t-if="service.is_popular">
-                                                        <div class="position-absolute top-0 start-0 m-2">
-                                                            <span class="badge bg-success rounded-pill px-3 py-2">POPÜLER</span>
+                                                        <div
+                                                            class="position-absolute top-0 start-0 m-2">
+                                                            <span
+                                                                class="badge bg-success rounded-pill px-3 py-2">
+                                                                POPÜLER</span>
                                                         </div>
                                                     </t>
-                                                    
-                                                    <div class="position-absolute bottom-0 start-0 end-0 p-3"
-                                                         style="background: linear-gradient(transparent, rgba(0,0,0,0.8));">
-                                                        <p class="text-white text-center mb-0 fw-semibold" t-esc="service.name"/>
+
+                                                    <div
+                                                        class="position-absolute bottom-0 start-0 end-0 p-3"
+                                                        style="background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+                                                        <p
+                                                            class="text-white text-center mb-0 fw-semibold"
+                                                            t-esc="service.name" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -70,58 +81,71 @@
                                         <div class="col-6 mb-5">
                                             <div class="d-flex align-items-start">
                                                 <div class="flex-shrink-0 me-3">
-                                                    <div class="border bg-white shadow-sm rounded-2 p-2">
-                                                        <i class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
+                                                    <div
+                                                        class="border bg-white shadow-sm rounded-2 p-2">
+                                                        <i
+                                                            class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6>Profesyonel Hizmet</h6>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Quisquam, quos.</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-6 mb-5">
                                             <div class="d-flex align-items-start">
                                                 <div class="flex-shrink-0 me-3">
-                                                    <div class="border bg-white shadow-sm rounded-2 p-2">
-                                                        <i class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
+                                                    <div
+                                                        class="border bg-white shadow-sm rounded-2 p-2">
+                                                        <i
+                                                            class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6>Profesyonel Hizmet</h6>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Quisquam, quos.</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-6 mb-5">
                                             <div class="d-flex align-items-start">
                                                 <div class="flex-shrink-0 me-3">
-                                                    <div class="border bg-white shadow-sm rounded-2 p-2">
-                                                        <i class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
+                                                    <div
+                                                        class="border bg-white shadow-sm rounded-2 p-2">
+                                                        <i
+                                                            class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6>Profesyonel Hizmet</h6>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Quisquam, quos.</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-6 mb-5">
                                             <div class="d-flex align-items-start">
                                                 <div class="flex-shrink-0 me-3">
-                                                    <div class="border bg-white shadow-sm rounded-2 p-2">
-                                                        <i class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
+                                                    <div
+                                                        class="border bg-white shadow-sm rounded-2 p-2">
+                                                        <i
+                                                            class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <h6>Profesyonel Hizmet</h6>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit. Quisquam, quos.</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="/" class="btn btn-primary rounded-pill px-4 py-2">Sağlık Hizmeti İçin Tıkla</a>
+                                <a href="/" class="btn btn-primary rounded-pill px-4 py-2">Sağlık
+                                    Hizmeti İçin Tıkla</a>
                             </div>
                         </div>
                     </div>
@@ -131,8 +155,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <h2 class="fw-bold text-center mb-3">Profesyonellerimize Gelen Yorumlar</h2>
-                                <p class="text-center mb-5">Çok beğeni alan profesyonellerimizin profillerine giderek yapılan yorumları okuyup güvenle hizmet alabilirsin!</p>
+                                <h2 class="fw-bold text-center mb-3">Profesyonellerimize Gelen
+                                    Yorumlar</h2>
+                                <p class="text-center mb-5">Çok beğeni alan profesyonellerimizin
+                                    profillerine giderek yapılan yorumları okuyup güvenle hizmet
+                                    alabilirsin!</p>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-10">
                                         <div class="row g-4">
@@ -146,28 +173,44 @@
                                                             <i class="fa fa-star fa-2x text-warning"></i>
                                                             <i class="fa fa-star fa-2x text-warning"></i>
                                                         </div>
-                                                        <p class="mb-4 text-center">Sağlık sektöründen aldığım hizmetten son derece memnun kaldım ve bu deneyimi paylaşmak istedim. Pleksus ekibi, beni her adımda rahat hissettirdi.</p>
+                                                        <p class="mb-4 text-center">Sağlık
+                                                            sektöründen aldığım hizmetten son derece
+                                                            memnun kaldım ve bu deneyimi paylaşmak
+                                                            istedim. Pleksus ekibi, beni her adımda
+                                                            rahat hissettirdi.</p>
                                                         <div class="mb-4 text-center">
                                                             <strong>Yiğithan A.</strong>
                                                             <span class="text-muted">(İstanbul)</span>
                                                         </div>
                                                         <div class="rounded-pill shadow-sm p-3">
                                                             <div class="d-flex align-items-center">
-                                                                <img src="/pleksus_web/static/src/images/50x50.png" class="rounded-circle me-3" />
+                                                                <img
+                                                                    src="/pleksus_web/static/src/images/50x50.png"
+                                                                    class="rounded-circle me-3" />
                                                                 <div class="flex-grow-1">
-                                                                    <div class="fw-bold">Dr. Ayşe Meran</div>
-                                                                    <div class="text-muted small">Noroloji Uzmanı</div>
+                                                                    <div class="fw-bold">Dr. Ayşe
+                                                                        Meran</div>
+                                                                    <div class="text-muted small">Noroloji
+                                                                        Uzmanı</div>
                                                                     <div class="mt-1">
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <span class="text-muted ms-1">(4.81)</span>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <span
+                                                                            class="text-muted ms-1">
+                                                                            (4.81)</span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="ms-2">
-                                                                    <i class="fa fa-chevron-right text-muted"></i>
+                                                                    <i
+                                                                        class="fa fa-chevron-right text-muted"></i>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -184,28 +227,44 @@
                                                             <i class="fa fa-star fa-2x text-warning"></i>
                                                             <i class="fa fa-star fa-2x text-warning"></i>
                                                         </div>
-                                                        <p class="mb-4 text-center">Sağlık sektöründen aldığım hizmetten son derece memnun kaldım ve bu deneyimi paylaşmak istedim. Pleksus ekibi, beni her adımda rahat hissettirdi.</p>
+                                                        <p class="mb-4 text-center">Sağlık
+                                                            sektöründen aldığım hizmetten son derece
+                                                            memnun kaldım ve bu deneyimi paylaşmak
+                                                            istedim. Pleksus ekibi, beni her adımda
+                                                            rahat hissettirdi.</p>
                                                         <div class="mb-4 text-center">
                                                             <strong>Yiğithan A.</strong>
                                                             <span class="text-muted">(İstanbul)</span>
                                                         </div>
                                                         <div class="rounded-pill shadow-sm p-3">
                                                             <div class="d-flex align-items-center">
-                                                                <img src="/pleksus_web/static/src/images/50x50.png" class="rounded-circle me-3" />
+                                                                <img
+                                                                    src="/pleksus_web/static/src/images/50x50.png"
+                                                                    class="rounded-circle me-3" />
                                                                 <div class="flex-grow-1">
-                                                                    <div class="fw-bold">Dr. Ayşe Meran</div>
-                                                                    <div class="text-muted small">Noroloji Uzmanı</div>
+                                                                    <div class="fw-bold">Dr. Ayşe
+                                                                        Meran</div>
+                                                                    <div class="text-muted small">Noroloji
+                                                                        Uzmanı</div>
                                                                     <div class="mt-1">
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <span class="text-muted ms-1">(4.81)</span>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <span
+                                                                            class="text-muted ms-1">
+                                                                            (4.81)</span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="ms-2">
-                                                                    <i class="fa fa-chevron-right text-muted"></i>
+                                                                    <i
+                                                                        class="fa fa-chevron-right text-muted"></i>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -222,28 +281,44 @@
                                                             <i class="fa fa-star fa-2x text-warning"></i>
                                                             <i class="fa fa-star fa-2x text-warning"></i>
                                                         </div>
-                                                        <p class="mb-4 text-center">Sağlık sektöründen aldığım hizmetten son derece memnun kaldım ve bu deneyimi paylaşmak istedim. Pleksus ekibi, beni her adımda rahat hissettirdi.</p>
+                                                        <p class="mb-4 text-center">Sağlık
+                                                            sektöründen aldığım hizmetten son derece
+                                                            memnun kaldım ve bu deneyimi paylaşmak
+                                                            istedim. Pleksus ekibi, beni her adımda
+                                                            rahat hissettirdi.</p>
                                                         <div class="mb-4 text-center">
                                                             <strong>Yiğithan A.</strong>
                                                             <span class="text-muted">(İstanbul)</span>
                                                         </div>
                                                         <div class="rounded-pill shadow-sm p-3">
                                                             <div class="d-flex align-items-center">
-                                                                <img src="/pleksus_web/static/src/images/50x50.png" class="rounded-circle me-3" />
+                                                                <img
+                                                                    src="/pleksus_web/static/src/images/50x50.png"
+                                                                    class="rounded-circle me-3" />
                                                                 <div class="flex-grow-1">
-                                                                    <div class="fw-bold">Dr. Ayşe Meran</div>
-                                                                    <div class="text-muted small">Noroloji Uzmanı</div>
+                                                                    <div class="fw-bold">Dr. Ayşe
+                                                                        Meran</div>
+                                                                    <div class="text-muted small">Noroloji
+                                                                        Uzmanı</div>
                                                                     <div class="mt-1">
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <i class="fa fa-star text-warning fa-sm"></i>
-                                                                        <span class="text-muted ms-1">(4.81)</span>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <i
+                                                                            class="fa fa-star text-warning fa-sm"></i>
+                                                                        <span
+                                                                            class="text-muted ms-1">
+                                                                            (4.81)</span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="ms-2">
-                                                                    <i class="fa fa-chevron-right text-muted"></i>
+                                                                    <i
+                                                                        class="fa fa-chevron-right text-muted"></i>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -270,40 +345,80 @@
                                 <h2 class="fw-bold text-center mb-3">Sıkça Sorulan Sorular</h2>
                                 <div class="accordion bg-white">
                                     <div class="accordion-item">
-                                      <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                          Accordion Item #1
-                                        </button>
-                                      </h2>
-                                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                                Accordion Item #1
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne"
+                                            class="accordion-collapse collapse show"
+                                            aria-labelledby="headingOne"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <strong>This is the first item's accordion body.</strong>
+                                                It is shown by default, until the collapse plugin
+                                                adds the appropriate classes that we use to style
+                                                each element. These classes control the overall
+                                                appearance, as well as the showing and hiding via
+                                                CSS transitions. You can modify any of this with
+                                                custom CSS or overriding our default variables. It's
+                                                also worth noting that just about any HTML can go
+                                                within the <code>.accordion-body</code>, though the
+                                                transition does limit overflow. </div>
                                         </div>
-                                      </div>
                                     </div>
                                     <div class="accordion-item">
-                                      <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                          Accordion Item #2
-                                        </button>
-                                      </h2>
-                                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseTwo" aria-expanded="false"
+                                                aria-controls="collapseTwo">
+                                                Accordion Item #2
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            aria-labelledby="headingTwo"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <strong>This is the second item's accordion body.</strong>
+                                                It is hidden by default, until the collapse plugin
+                                                adds the appropriate classes that we use to style
+                                                each element. These classes control the overall
+                                                appearance, as well as the showing and hiding via
+                                                CSS transitions. You can modify any of this with
+                                                custom CSS or overriding our default variables. It's
+                                                also worth noting that just about any HTML can go
+                                                within the <code>.accordion-body</code>, though the
+                                                transition does limit overflow. </div>
                                         </div>
-                                      </div>
                                     </div>
                                     <div class="accordion-item">
-                                      <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                          Accordion Item #3
-                                        </button>
-                                      </h2>
-                                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                Accordion Item #3
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="headingThree"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <strong>This is the third item's accordion body.</strong>
+                                                It is hidden by default, until the collapse plugin
+                                                adds the appropriate classes that we use to style
+                                                each element. These classes control the overall
+                                                appearance, as well as the showing and hiding via
+                                                CSS transitions. You can modify any of this with
+                                                custom CSS or overriding our default variables. It's
+                                                also worth noting that just about any HTML can go
+                                                within the <code>.accordion-body</code>, though the
+                                                transition does limit overflow. </div>
                                         </div>
-                                      </div>
                                     </div>
                                 </div>
                                 <div class="text-center mt-5">
@@ -321,12 +436,18 @@
                         <div class="row">
                             <div class="col-12">
                                 <h2 class="fw-bold text-center mb-4">Tüm Hizmetlerimiz</h2>
-                                <div class="d-flex justify-content-center align-items-center flex-wrap gap-3">
-                                    <a href="" class="btn rounded-pill shadow-sm px-4 py-2">Basit Hemşirelik Bakımı</a>
-                                    <a href="" class="btn rounded-pill shadow-sm px-4 py-2">Girişimsel Hemşirelik</a>
-                                    <a href="" class="btn rounded-pill shadow-sm px-4 py-2">Ameliyat Sonrası Bakım</a>
-                                    <a href="" class="btn rounded-pill shadow-sm px-4 py-2">İlaç Kontrolleri</a>
-                                    <a href="" class="btn rounded-pill shadow-sm px-4 py-2">Gece Bakımı</a>
+                                <div
+                                    class="d-flex justify-content-center align-items-center flex-wrap gap-3">
+                                    <a href="" class="btn rounded-pill shadow-sm px-4 py-2">Basit
+                                        Hemşirelik Bakımı</a>
+                                    <a href="" class="btn rounded-pill shadow-sm px-4 py-2">Girişimsel
+                                        Hemşirelik</a>
+                                    <a href="" class="btn rounded-pill shadow-sm px-4 py-2">Ameliyat
+                                        Sonrası Bakım</a>
+                                    <a href="" class="btn rounded-pill shadow-sm px-4 py-2">İlaç
+                                        Kontrolleri</a>
+                                    <a href="" class="btn rounded-pill shadow-sm px-4 py-2">Gece
+                                        Bakımı</a>
                                 </div>
                             </div>
                         </div>
@@ -361,7 +482,8 @@
                                             <div class="icon-circle mb-3">
                                                 <i class="fa fa-heart fa-3x text-white"></i>
                                             </div>
-                                            <p>Sağlık profesyonellerine mesaj at, ara ve haritada takip et</p>
+                                            <p>Sağlık profesyonellerine mesaj at, ara ve haritada
+                                                takip et</p>
                                         </div>
                                     </div>
                                 </div>
@@ -392,10 +514,237 @@
                         </div>
                     </div>
                 </section>
-                
-                
+
+
             </t>
         </template>
 
+        <!-- Login Template -->
+        <template id="pleksus_login" inherit_id="web.login" name="Pleksus Login">
+            <xpath expr="//form[@class='oe_login_form']" position="replace">
+                <section class="py-5 bg-light">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <form class="oe_login_form" role="form" t-attf-action="/web/login"
+                                    method="post"
+                                    onsubmit="this.action = '/web/login' + location.hash">
+                                    <input type="hidden" name="csrf_token"
+                                        t-att-value="request.csrf_token()" />
+
+                                    <div class="mb-3" t-if="databases and len(databases) &gt; 1">
+                                        <label for="db" class="col-form-label">Database</label>
+                                        <div
+                                            t-attf-class="input-group {{'input-group-sm' if form_small else ''}}">
+                                            <input type="text" name="db" t-att-value="request.db"
+                                                id="db"
+                                                t-attf-class="form-control #{'form-control-sm' if form_small else ''}"
+                                                required="required" readonly="readonly" />
+                                            <a role="button" href="/web/database/selector"
+                                                class="btn btn-secondary">Select <i
+                                                    class="fa fa-database" role="img"
+                                                    aria-label="Database" title="Database" /></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3 field-login">
+                                        <label for="login" class="form-label">Email</label>
+                                        <input type="text" placeholder="Email" name="login"
+                                            t-att-value="login" id="login"
+                                            t-attf-class="form-control #{'form-control-sm' if form_small else ''}"
+                                            required="required" autocomplete="username"
+                                            autofocus="autofocus" autocapitalize="off" />
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" placeholder="Password"
+                                            name="password" id="password"
+                                            t-attf-class="form-control #{'form-control-sm' if form_small else ''}"
+                                            required="required" autocomplete="current-password"
+                                            t-att-autofocus="'autofocus' if login else None"
+                                            maxlength="4096" />
+                                    </div>
+
+                                    <p class="alert alert-danger" t-if="error" role="alert">
+                                        <t t-esc="error" />
+                                    </p>
+                                    <p class="alert alert-success" t-if="message" role="status">
+                                        <t t-esc="message" />
+                                    </p>
+
+                                    <div
+                                        t-attf-class="clearfix oe_login_buttons text-center gap-1 d-grid mb-1 {{'pt-2' if form_small else 'pt-3'}}">
+                                        <button type="submit" class="btn btn-primary">Log in</button>
+                                        <div class="justify-content-between mt-2 d-flex small">
+                                            <a t-if="signup_enabled"
+                                                t-attf-href="/web/signup?{{ keep_query() }}">Don't
+                                                have an account?</a>
+                                            <a t-if="reset_password_enabled"
+                                                t-attf-href="/web/reset_password?{{ keep_query() }}">Reset
+                                                Password</a>
+                                        </div>
+                                        <t t-if="debug">
+
+                                            <button type="submit" name="redirect"
+                                                value="/web/become" class="btn btn-link btn-sm">Log
+                                                in as superuser</button>
+                                        </t>
+                                        <div class="o_login_auth" />
+                                    </div>
+
+                                    <input type="hidden" name="redirect" t-att-value="redirect" />
+                                </form>
+                            </div>
+                            <div class="col-md-8">
+                                <h2 class="fw-bold text-center mb-5">Pleksus Sağlık Profesyonelleri</h2>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="card h-100 shadow-sm border-0">
+                                            <div class="card-body d-flex flex-column">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img src="/pleksus_web/static/src/images/50x50.png" 
+                                                             alt="Dr. Ayça Meral" 
+                                                             class="rounded-circle" 
+                                                             style="width: 60px; height: 60px; object-fit: cover;" />
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="card-title mb-1">Dr. Ayça Meral</h5>
+                                                        <div class="mb-2">
+                                                            <span class="text-warning">
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                        <span class="text-primary py-1 rounded-pill">
+                                                            4 Hizmet
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-auto">
+                                                    <p class="card-text text-muted fst-italic">
+                                                        "Pleksus'le gittiğimiz her evde bir şeyler öğreniyoruz, bu bize çok şey katıyor."
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="card h-100 shadow-sm border-0">
+                                            <div class="card-body d-flex flex-column">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img src="/pleksus_web/static/src/images/50x50.png" 
+                                                             alt="Dr. Mehmet Kaya" 
+                                                             class="rounded-circle" 
+                                                             style="width: 60px; height: 60px; object-fit: cover;" />
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="card-title mb-1">Dr. Mehmet Kaya</h5>
+                                                        <div class="mb-2">
+                                                            <span class="text-warning">
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                        <span class="text-primary py-1 rounded-pill">
+                                                            6 Hizmet
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-auto">
+                                                    <p class="card-text text-muted fst-italic">
+                                                        "Hasta memnuniyeti odaklı çalışma felsefesi ile gerçekten fark yaratıyoruz."
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="card h-100 shadow-sm border-0">
+                                            <div class="card-body d-flex flex-column">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img src="/pleksus_web/static/src/images/50x50.png" 
+                                                             alt="Hemşire Elif Demir" 
+                                                             class="rounded-circle" 
+                                                             style="width: 60px; height: 60px; object-fit: cover;" />
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="card-title mb-1">Hemşire Elif Demir</h5>
+                                                        <div class="mb-2">
+                                                            <span class="text-warning">
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                        <span class="text-primary py-1 rounded-pill">
+                                                            8 Hizmet
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-auto">
+                                                    <p class="card-text text-muted fst-italic">
+                                                        "Evde bakım hizmeti verirken ailelerin güvenini kazanmak en büyük motivasyonum."
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="card h-100 shadow-sm border-0">
+                                            <div class="card-body d-flex flex-column">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img src="/pleksus_web/static/src/images/50x50.png" 
+                                                             alt="Dr. Zeynep Özkan" 
+                                                             class="rounded-circle" 
+                                                             style="width: 60px; height: 60px; object-fit: cover;" />
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="card-title mb-1">Dr. Zeynep Özkan</h5>
+                                                        <div class="mb-2">
+                                                            <span class="text-warning">
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                        <span class="text-primary py-1 rounded-pill">
+                                                            5 Hizmet
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-auto">
+                                                    <p class="card-text text-muted fst-italic">
+                                                        "Teknoloji destekli sağlık hizmetleri ile hasta takibini daha etkili yapabiliyoruz."
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </xpath>
+        </template>
     </data>
 </odoo>

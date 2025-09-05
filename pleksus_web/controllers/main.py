@@ -20,7 +20,7 @@ class PleksusWebController(http.Controller):
                 ('active', '=', True)
             ], order='sequence, name')
         
-        return request.render('pleksus_web.homepage', {
+        return request.render('pleksus_web.pleksus_homepage', {
             'categories': categories
         })
     
