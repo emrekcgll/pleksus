@@ -82,7 +82,7 @@
                                             <div class="d-flex align-items-start">
                                                 <div class="flex-shrink-0 me-3">
                                                     <div
-                                                        class="border bg-white shadow-sm rounded-2 p-2">
+                                                        class="border shadow-sm rounded-2 p-2">
                                                         <i
                                                             class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
                                                     </div>
@@ -98,7 +98,7 @@
                                             <div class="d-flex align-items-start">
                                                 <div class="flex-shrink-0 me-3">
                                                     <div
-                                                        class="border bg-white shadow-sm rounded-2 p-2">
+                                                        class="border shadow-sm rounded-2 p-2">
                                                         <i
                                                             class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
                                                     </div>
@@ -114,7 +114,7 @@
                                             <div class="d-flex align-items-start">
                                                 <div class="flex-shrink-0 me-3">
                                                     <div
-                                                        class="border bg-white shadow-sm rounded-2 p-2">
+                                                        class="border shadow-sm rounded-2 p-2">
                                                         <i
                                                             class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
                                                     </div>
@@ -130,7 +130,7 @@
                                             <div class="d-flex align-items-start">
                                                 <div class="flex-shrink-0 me-3">
                                                     <div
-                                                        class="border bg-white shadow-sm rounded-2 p-2">
+                                                        class="border shadow-sm rounded-2 p-2">
                                                         <i
                                                             class="fa fa-american-sign-language-interpreting fa-2x text-primary"></i>
                                                     </div>
@@ -882,6 +882,13 @@
                     </div>
                 </section>
 
+            </t>
+        </template>
+
+        <!-- Hasta Hizmet Talep Template -->
+        <template id="pleksus_service_request" name="Pleksus Hasta Hizmet Talep">
+            <t t-call="website.layout">
+            
             </t>
         </template>
 

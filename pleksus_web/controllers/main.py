@@ -6,7 +6,7 @@ from odoo.http import request
 
 class PleksusWebController(http.Controller):
     
-    @http.route(['/', '/home'], type='http', auth='public', website=True)
+    @http.route('/', type='http', auth='public', website=True)
     def homepage(self, **kwargs):
         """Ana sayfa route'u"""
         categories = request.env['pleksus.service.category'].sudo().search([
@@ -27,10 +27,53 @@ class PleksusWebController(http.Controller):
 
     @http.route('/application', type='http', auth='public', website=True)
     def application(self, **kwargs):
-        """Başvuru sayfası"""
+        """Sağlıkçı başvuru sayfası"""
         return request.render('pleksus_web.pleksus_application')
+
+
+    @http.route('/service-request', type='http', auth='public', website=True)
+    def service_request_form(self, **kwargs):
+        """Hasta hizmet talep formu"""
+        return request.render('pleksus_web.pleksus_service_request')
     
+    @http.route('/service/request', type='http', auth='public', website=True, methods=['POST'], csrf=True)
+    def service_request_submit(self, **kwargs):
+        """Hizmet talep formu işleme"""
+        try:
+            # Form verilerini al
+            city = kwargs.get('city', '')
+            district = kwargs.get('district', '')
+            service_date = kwargs.get('service_date', '')
+            service_time = kwargs.get('service_time', '')
+            person_count = kwargs.get('person_count', '')
+            
+            # Basit validasyon
+            if not all([city, district, service_date, service_time, person_count]):
+                return request.render('pleksus_web.pleksus_service_request', {
+                    'error': 'Lütfen tüm gerekli alanları doldurun.'
+                })
+            
+            # Burada hizmet talep kaydı oluşturulabilir
+            # request_vals = {
+            #     'city': city,
+            #     'district': district,
+            #     'service_date': service_date,
+            #     'service_time': service_time,
+            #     'person_count': person_count,
+            #     'state': 'draft',
+            # }
+            # service_request = request.env['pleksus.service.request'].sudo().create(request_vals)
+            
+            return request.render('pleksus_web.pleksus_service_request', {
+                'success': 'Hizmet talebiniz başarıyla alındı!'
+            })
+            
+        except Exception as e:
+            return request.render('pleksus_web.pleksus_service_request', {
+                'error': 'Bir hata oluştu. Lütfen tekrar deneyin.'
+            })
     
+
     @http.route('/contact', type='http', auth='public', website=True, methods=['POST'])
     def contact_form(self, **kwargs):
         """İletişim formu işleme"""
